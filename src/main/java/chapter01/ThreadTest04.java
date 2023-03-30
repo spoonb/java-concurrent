@@ -1,5 +1,8 @@
 package chapter01;
 
+/**
+ * notify
+ */
 public class ThreadTest04 {
 
     private static Object lock = new Object();
@@ -8,6 +11,11 @@ public class ThreadTest04 {
         Thread thread1 = new Thread(() -> {
             synchronized (lock) {
                 for (int i = 1; i <= 10; i++) {
+                    try {
+                        lock.wait();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                     System.out.printf("%s-%02d\n", Thread.currentThread().getName(), i);
                     lock.notify();
 //                    System.out.printf("%s-%s\n", Thread.currentThread().getName(), Thread.currentThread().getState());

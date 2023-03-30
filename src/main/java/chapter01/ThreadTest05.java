@@ -1,5 +1,8 @@
 package chapter01;
 
+/**
+ * 使用wait和notify实现线程交替执行
+ */
 public class ThreadTest05 {
 
     private static Object lock = new Object();

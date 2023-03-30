@@ -1,5 +1,8 @@
 package chapter01;
 
+/**
+ * wait
+ */
 public class ThreadTest03 {
 
     private static Object lock = new Object();

@@ -1,5 +1,8 @@
 package chapter01;
 
+/**
+ * sleep
+ */
 public class ThreadTest02 {
 
     public static void main(String[] args) {
